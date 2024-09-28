@@ -1,0 +1,127 @@
+.footers {
+    clear: both;
+    font-size: 0.8rem;
+    height: 147px;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    bottom: -54px;
+    color: white;
+  }
+  .content-1 {
+    height: 100%;
+    width: 33%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .content-2 {
+    width: 33%;
+    display: flex;
+    justify-content: center;
+  }
+  .copyRight {
+    font-size: 1rem;
+  }
+  .content-3 {
+    height: 100%;
+    width: 33%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+  }
+  .footer-menu {
+    display: flex;
+    margin: 1em 3em;
+  }
+  .footer-menu-items {
+    list-style: none;
+    font-size: 1rem;
+    margin: 0 1rem;
+  }  
+  .menu-items{
+    text-decoration: none;
+  }
+
+  @media(max-width: 1050px){
+    .content-1 {
+      align-items: flex-start;
+      justify-content: flex-start;
+    }
+    .content-2 {
+      position: absolute;
+      width: 100%;
+      bottom: 0;
+    }
+    .social-menu {
+      padding: 0;
+    }
+    .footer-menu{
+      flex-direction: column;
+    }
+  }
+
+@media (max-width:900px) {
+  .content-1 {
+    align-items: center;
+    justify-content: flex-start;
+  }
+  .content-2 {
+    display: flex;
+    order: 3;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+  }
+  .content-3 {
+    align-items: center;
+    justify-content: center;
+  }
+  .footer-menu {
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+@media (max-width:500px) {
+  .social-menu {
+    display: flex;
+    padding: 0;
+    align-content: center;
+    flex-wrap: wrap;
+  }
+  .copyRight {
+    font-size: 0.7rem;
+  }
+    
+  .footer-menu-items {
+    font-size: 0.8rem;
+  }  
+}
+
+@media (max-width:350px) {
+  .social-menu {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    align-content: center;
+    flex-wrap: wrap;
+  }
+  .content-1{
+    flex-wrap: nowrap;
+  }
+  
+  .copyRight {
+    font-size: 0.5rem;
+  }
+  .footer-menu {
+    display: flex;
+  }
+  .footer-menu-items {
+    font-size: 0.8rem;
+    display: flex;
+  }
+  
+}

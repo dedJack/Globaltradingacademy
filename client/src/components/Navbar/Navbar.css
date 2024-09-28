@@ -1,0 +1,165 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 5px;
+  background-color: #e8e1f0;
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  font-size: 1.5em;
+  font-weight: bold;
+  gap: 10px;
+}
+.brand img {
+  height: 50px;
+  width: 56px;
+}
+.nav-menu {
+  display: flex;
+  align-items: center;
+  margin-top: 8px;
+}
+.nav-items {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+  cursor: pointer;
+  margin-bottom: 0;
+}
+
+/* Base styling for the list items */
+.nav-items li {
+  position: relative;
+  list-style: none;
+  margin: 0 15px;
+  display: inline-block;
+  padding-bottom: 5px;
+  transition: color 0.3s ease-in-out;
+}
+
+/* Style for the links within the list items */
+.nav-items li a {
+  text-decoration: none;
+  color: black; /* Default text color */
+  font-size: 18px; /* Adjust the font size to your preference */
+  padding: 0 5px;
+  display: inline-block;
+}
+
+/* Hover effect: Underline grows from center to the sides */
+.nav-items li a::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 0;
+  height: 2px; /* Thickness of the underline */
+  background-color: rgb(200, 23, 23);
+  transition: width 0.3s ease, left 0.3s ease;
+}
+
+/* On hover, the underline expands from center */
+.nav-items li:hover a::before {
+  width: 100%;
+  left: 0;
+}
+
+/* Active state: Keep the underline and bold text */
+.nav-items li a.active::before {
+  width: 100%;
+  left: 0;
+}
+
+.hamburger {
+  display: none; /* Hidden by default */
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.navbar .active {
+  padding-bottom: 5px;
+  /* border-bottom: 2px solid gray; */
+  /* transition: 0.3s; */
+}
+
+@media (max-width: 1200px) {
+  .navbar {
+    padding: 0;
+  }
+  .brand {
+    font-size: 1rem;
+    gap: 8px;
+  }
+  .nav-items {
+    gap: 20px;
+  }
+}
+@media (max-width: 1050px) {
+  .nav-items {
+    gap: 0px;
+  }
+  .nav-items li a {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .brand li {
+    display: none;
+  }
+}
+
+@media (max-width: 750px) {
+  .navbar {
+    /* padding: 0; */
+    padding: 7px 5px;
+  }
+  .brand img {
+    height: 50px;
+    width: 50px;
+  }
+  .nav-items li {
+    margin: 0 10px;
+  }
+}
+
+/* Hamburger menu for screens smaller than 650px */
+@media (max-width: 650px) {
+  .brand img {
+    margin: 0 1rem;
+  }
+
+  .hamburger {
+    display: block; /* Show hamburger icon */
+  }
+
+  .nav-menu {
+    display: none; /* Hide menu by default */
+    flex-direction: column;
+    position: absolute;
+    top: 50px;
+    transition: height 0.3s ease, opacity 0.3s ease; /* Transition effect */
+    right: 0;
+    background-color: #2a2727;
+    width: 100%;
+  }
+  .nav-items {
+    flex-direction: column;
+  }
+  .nav-menu.open {
+    display: flex; /* Show menu when hamburger clicked */
+  }
+  .nav-items li {
+    margin: 15px 0;
+  }
+  .nav-items li a {
+    color: aliceblue;
+  }
+}

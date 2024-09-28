@@ -1,0 +1,52 @@
+.error-page{
+    position: absolute;
+    height:100vh;
+    width: 100vw;
+}
+
+.content{
+    text-align: center;
+    width: 45vw;
+}
+.content h2{
+    margin-top: 2rem;
+    font-size: 18vw;
+    line-height: 1em;
+}
+
+.rainbow-text {
+    font-size: 4rem;
+    font-weight: bold;
+    background-image: linear-gradient(90deg, red, orange, yellow, green, indigo, violet);
+    background-size: 400%;
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: rainbow 5s infinite;
+}
+
+@keyframes rainbow {
+    0% {
+        background-position: 0%;
+    }
+    50% {
+        background-position: 50%;
+    }
+    100%{
+        background-position: 100%;
+    }
+}
+.btns{
+    width: 70%;
+    display: flex;
+    justify-content: space-around;
+    margin: 2rem auto;
+}
+.btns a{
+    background-color: aquamarine;
+    padding: .3rem 2rem;
+    border-radius: 20px;
+    transition: box-shadow 0.2s ease-in-out;
+}
+.btns a:hover{
+    box-shadow: inset 0.5px 1px 6px 0px black;;
+}

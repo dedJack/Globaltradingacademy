@@ -1,0 +1,84 @@
+.contacts {
+  height: 100%;
+  margin: -1rem 0;
+  position: relative;
+  border: 2px solid white;
+  border-radius: 18px 17px 0 0;
+  box-shadow: 0 -11px 20px -13px #939090;
+}
+.contactForm {
+  width: 50%;
+  float: left;
+  margin: 20px 0;
+}
+.contact-page {
+  font-size: 3rem;
+  padding: 1rem 0;
+  border-radius: 18px 17px 0 0;
+  background-color: whitesmoke;
+}
+
+.contactForm div input {
+  width: 100%;
+  outline: none;
+  border-radius: 0px;
+  border: none;
+  border-bottom: 2px solid black;
+  font-size: 20px;
+}
+
+.contactForm div button {
+  width: 100%;
+  background-color: black;
+  color: white;
+  height: 4rem;
+  border-radius: 0px;
+  border: none;
+  border-bottom: 2px solid black;
+  font-size: 20px;
+  text-align: justify;
+}
+
+.detailFrom {
+  width: 40%;
+  float: right;
+  margin: 3rem 15px;
+  font-size: 2rem;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.heading{
+  font-size: 2.5rem;
+}
+.detailFrom p {
+  font-size: large;
+}
+
+.detailFrom .companyEmail {
+  color: black;
+  text-decoration: none;
+  font-size: 1.1rem;
+}
+
+@media (max-width:700px) {
+    /* contact from */
+    .contactForm {
+      width: 100%;
+    }
+    .detailFrom {
+      width: 100%;
+      margin: 0 4px 35px;
+    }
+}
+@media (max-width:500px) {
+    /* contact from */
+    .contactForm {
+      width: 100%;
+    }
+    .detailFrom {
+      width: 100%;
+      margin: 0 4px 35px;
+    }
+    .detailFrom div .heading {
+      font-size: 1.8rem;
+    }
+  }

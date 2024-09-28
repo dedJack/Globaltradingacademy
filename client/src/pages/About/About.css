@@ -1,0 +1,38 @@
+.about-home {
+    margin: 1rem;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 2px solid white;
+    border-radius: 18px 17px 0 0;
+    box-shadow: 0 -11px 20px -13px #939090;
+}
+.about-review {
+  height: 100%;
+  text-align: justify;
+  max-width: 800px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.about-review h2 {
+  font-size: 3rem;
+  margin-bottom: 1.4rem;
+}
+
+.about-container{
+  position: absolute;
+  margin: 2rem 0;
+  width: 100%;
+}
+
+@media (max-width: 500px) {
+  .about-review h2 {
+    font-size: 2rem;
+  }
+  
+}

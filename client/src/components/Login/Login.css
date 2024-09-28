@@ -1,0 +1,55 @@
+.signForm {
+    background-color: black;
+    width: 80%;
+    top: 20px;
+    border-radius: 15px;
+    padding: 0;
+    color: whitesmoke;
+    font-family: "Times New Roman", Times, serif;
+    position: relative;
+    display: flex;
+  }
+  
+  .image-controller-login {
+    width: 55%;
+    height: 100%;
+  }
+  .image-controller-login img{
+    border-radius: 10px;
+  }
+  .main-title {
+    margin: 1rem 0;
+    padding: 0.5rem 0;
+    text-align: center;
+  }
+  
+  .myInfo {
+    width: 40%;
+    margin: auto;
+  }
+  
+  .myInfo input {
+    background-color: rgb(214, 197, 197);
+    border: none;
+  }
+  
+  .signupBtn {
+    border-radius: 10px;
+    background-color: rgb(42, 1, 80);
+    border: none;
+    box-shadow: 1px 1px 5px rgb(42, 1, 80);
+  }
+
+  @media (max-width: 1050px) {
+
+    .signForm{
+      flex-direction: column;
+    }
+
+    .image-controller-login {
+      width: 100%;
+    }
+    .myInfo{
+      width: 75%;
+    }
+  }
