@@ -7,21 +7,18 @@ const connectDB = require('./db');
 const authRouter = require('./routes/auth');
 const contactRoute = require('./routes/contact');
 const errorMiddleware = require('./middlewares/error');
-const allowedOrigins = ['http://localhost:3000', 'http://192.168.1.10:3000'];
-
-//Middleware
+const allowedOrigins = process.env.SERVER_API_URL || "https://globaltradingacademy.netlify.app"
 
 const corsOptions = {
   origin: function (origin, callback) {
-    if (allowedOrigins.indexOf(origin) !== -1 || !origin) {
-      // If the origin is in the list of allowed origins, or if there is no origin (for server-side requests like Postman), allow the request
-      callback(null, true);
+    if (!origin || allowedOrigins.indexOf(origin) !== -1) {
+      callback(null, true); // Allow the origin
     } else {
       callback(new Error('Not allowed by CORS'));
     }
   },
   methods: "GET, POST, PUT, DELETE, PATCH, HEAD",
-  credentials: true
+  credentials: true, // Allow credentials (cookies, authorization headers, etc.)
 };
 
 app.use(cors(corsOptions));
