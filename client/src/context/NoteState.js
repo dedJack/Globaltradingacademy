@@ -24,7 +24,7 @@ const NoteState = (props) => {
 
     const userAuthentication = async () => {
         try {
-            const response = await fetch("http://localhost:5000/api/auth/getUser", {
+            const response = await fetch(`${api_url}/api/auth/getUser`, {
                 method: "GET",
                 headers: {
                     "auth-token": token,

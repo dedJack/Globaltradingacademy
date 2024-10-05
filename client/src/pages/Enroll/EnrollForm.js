@@ -53,7 +53,7 @@ const EnrollForm = () => {
             toast.error("Enter your query.")
         } else {
             try {
-                const response = await fetch("http://localhost:5000/api/form/enquiry", {
+                const response = await fetch(`${api_url}/api/form/enquiry`, {
                     method: "POST",
                     headers: {
                         "Content-Type": "application/json"

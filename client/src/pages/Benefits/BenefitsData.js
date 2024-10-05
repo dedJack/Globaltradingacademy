@@ -36,7 +36,7 @@ const benefitsData = [
   {
     title: 'Indian Market',
     links: `
-  < div >
+  <div>
               <h3>Key Exchanges</h3>
               <ol>
                 <li>
@@ -98,7 +98,7 @@ const benefitsData = [
   },
   {
     title: 'Fundamental Analysis',
-    links: `< div >  
+    links: `<div>  
         <p>
           Fundamental stock analysis is a method used to evaluate a stock's intrinsic
           value based on various economic, financial, and qualitative factors. The
@@ -169,7 +169,7 @@ const benefitsData = [
   {
     title: 'Technical Analysis',
     links: `
-  < div >
+  <div>
           <p>Technical stock analysis is a method used to evaluate and predict future stock price movements based on historical price data and trading volumes. Unlike fundamental analysis, which focuses on a company’s financial health and economic factors, technical analysis relies on chart patterns and technical indicators. Here’s an introduction to its core concepts:</p>
   
           <ol>
@@ -215,7 +215,7 @@ const benefitsData = [
   },
   {
     title: 'Crypto Currency',
-    links: `< div >
+    links: `<div>
         <p>Trading cryptocurrency involves buying and selling digital assets with the goal of making a profit. Unlike traditional stock trading, cryptocurrency trading operates 24/7 and can be highly volatile. Here’s a step-by-step guide on how to trade cryptocurrency:</p>
   
         <ol>
@@ -275,7 +275,7 @@ const benefitsData = [
   },
   {
     title: 'Binary Trading',
-    links: `< div >
+    links: `<div>
   <p>
     Binary trading, or binary options trading, is a financial trading method where the outcome is a simple yes/no proposition.
     Traders predict whether the price of an asset (e.g., stocks, currencies) will be above or below a specified level at a certain time.
@@ -286,7 +286,7 @@ const benefitsData = [
   },
   {
     title: 'Trade Management',
-    links: `< div >
+    links: `<div>
   <p>
     Trade management involves overseeing and optimizing trades to maximize profitability and minimize risk. It includes setting clear entry and exit points, such as using stop-loss and take-profit orders to control potential losses and secure gains. Effective trade management also involves adjusting positions based on market conditions, monitoring trade performance, and adapting strategies as needed. It requires discipline, timely decision-making, and regular review of trading strategies. Proper trade management helps in maintaining a balanced portfolio, managing risk exposure, and ensuring that trading objectives align with overall financial goals.
   </p>
@@ -295,7 +295,7 @@ const benefitsData = [
   },
   {
     title: 'Options Chain',
-    links: ` < div >
+    links: ` <div>
         <p>
           An options chain, also known as an option chain or option matrix, is a comprehensive listing of all available options contracts for a specific underlying asset, such as a stock, index, or ETF.
           It provides detailed information about various options, helping traders and investors make informed decisions. Here’s a breakdown of its key components:
@@ -325,7 +325,7 @@ const benefitsData = [
   {
     title: 'Hedging Strategy',
     links:
-      `< div >
+      `<div>
           <p>Hedging strategy used to manage risk and capitalize on short-term market movements.</p>
           <p>
             Hedging is a risk management strategy aimed at reducing potential losses in an investment portfolio by taking an offsetting position. This is often done through derivatives like options, futures, or swaps. For example, if an investor holds a stock that might decline in value, they could buy a put option (which increases in value when the stock price falls) to offset potential losses. Hedging helps protect against adverse price movements, but it may also limit potential gains. It is commonly used by both individual investors and institutions to manage portfolio risk.
@@ -334,7 +334,7 @@ const benefitsData = [
   },
   {
     title: 'Scalping Strategy',
-    links: `< div >
+    links: `<div>
         <p>Scalping strategy used to manage risk and capitalize on short-term market movements.</p>
         <p>
           Scalping is a short-term trading strategy focused on making small, quick profits by exploiting minor price fluctuations. Scalpers typically hold positions for seconds to minutes and execute numerous trades throughout the day. They rely on high liquidity and low transaction costs to achieve their goals. Scalping requires precise execution and rapid decision-making, as well as an understanding of market microstructure and price patterns. Traders often use technical analysis and automated trading systems to identify and act on trading opportunities quickly.
@@ -344,7 +344,7 @@ const benefitsData = [
   {
     title: 'Money Management',
     links:
-      `< div >
+      `<div>
           <p>
             Money management involves planning, organizing, and controlling financial resources to achieve financial goals and maintain stability.
             It encompasses budgeting, saving, investing, and monitoring expenses to ensure that money is used efficiently and effectively.
@@ -373,7 +373,7 @@ const benefitsData = [
   },
   {
     title: 'Psycology building',
-    links: `< div >
+    links: `<div>
   
         <p>
           Psychology in stock trading is a critical aspect of successful trading, as it influences decision-making, risk tolerance, and overall performance.
@@ -446,10 +446,10 @@ const benefitsData = [
     </ul>
     <p class="summary">Overall, offline classes provide a hands-on, interactive, and structured learning environment that can enhance the educational experience for those interested in stock trading.</p>
   </div>`
-    },
-    {
-      title: '1-1 Doubt Sessions',
-      links: ` < div >
+  },
+  {
+    title: '1-1 Doubt Sessions',
+    links: ` <div>
         <ul>
           <li><strong>Personalized Attention:</strong> Tailored guidance for your individual questions and trading challenges.</li>
           <li><strong>Focused Learning:</strong> In-depth exploration of topics or strategies specific to your needs.</li>
@@ -460,10 +460,10 @@ const benefitsData = [
         </ul>
         <p class="summary">One-on-one sessions provide tailored support, focused learning, and personalized strategies, enhancing your trading skills and confidence effectively.</p>
       </ > `
-    },
-    {
-      title: 'Portfolio Management',
-      links: `< div >
+  },
+  {
+    title: 'Portfolio Management',
+    links: `<div>
         <p>Portfolio management involves the strategic planning, allocation, and oversight of a collection of investments to achieve specific financial goals. It’s a critical aspect of investing, aimed at optimizing returns while managing risk.</p>
   
         <h5>Key Elements of Portfolio Management</h5>
@@ -519,7 +519,7 @@ const benefitsData = [
   
         <p class="summary">Effective portfolio management requires ongoing analysis, strategic decision-making, and a disciplined approach. By carefully managing your portfolio, you can achieve a balanced approach to risk and return, helping to meet your financial objectives.</p>
       </ > `
-    }
-  ];
-  
-  export default benefitsData;
+  }
+];
+
+export default benefitsData;

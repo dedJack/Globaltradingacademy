@@ -4,13 +4,13 @@ import { NavLink } from 'react-router-dom'
 
 const Enroll = () => {
 
-    // const api_url = process.env.REACT_APP_FRONTEND_URL;
+    const api_url = process.env.REACT_APP_FRONTEND_URL;
     const [information, setInformation] = useState("");
 
     const handleInfo = async () => {
         try {
             // console.log("hii")
-            const response = await fetch("http://localhost:5000/api/form/information", {
+            const response = await fetch(`${api_url}/api/form/information`, {
                 method: "GET",
                 headers: {
                     "Content-Type": "application/json"

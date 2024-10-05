@@ -43,7 +43,7 @@ const Login = () => {
             toast.error('Password should be atleast 6 letters');
         } else {
             try {
-                const response = await fetch("http://localhost:5000/api/auth/login", {
+                const response = await fetch(`${api_url}/api/auth/login`, {
                     method: "POST",
                     headers: {
                         "Content-Type": "application/json"

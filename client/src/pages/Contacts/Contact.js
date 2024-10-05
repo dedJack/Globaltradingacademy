@@ -50,7 +50,7 @@ const Contacts = () => {
             toast.error("Provide phone no.")
         } else {
             try {
-                const response = await fetch("http://localhost:5000/api/form/contact", {
+                const response = await fetch(`${api_url}/api/form/contact`, {
                     method: "POST",
                     headers: {
                         "Content-Type": "application/json"
