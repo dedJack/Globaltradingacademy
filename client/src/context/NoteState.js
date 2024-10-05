@@ -9,6 +9,7 @@ const NoteState = (props) => {
 
     // Function to save server token in localStorage
     const serverTokenLS = (serverToken) => {
+        setToken(serverToken);
         return localStorage.setItem("userDataToken", serverToken);
     };
 

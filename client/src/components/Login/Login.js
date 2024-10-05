@@ -50,7 +50,6 @@ const Login = () => {
                     }, body: JSON.stringify(user)
                 });
                 const data = await response.json();
-                console.log(data);
                 if (response.ok) {
                     //saving the token in localStorage.
                     serverTokenLS(data.token);

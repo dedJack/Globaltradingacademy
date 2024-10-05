@@ -131,7 +131,7 @@ const Contacts = () => {
                                 <div>
                                     <p>
                                         <Link to="https://wa.me/+919202103433?text=Hello, I need some assistance!" target='_blank' className="companyPhone" style={{ color: 'black' }}>
-                                            <b>Contact: </b><span style={{ textDecoration: "underline" }}>9202103433</span>
+                                            <b>Contact: </b><span style={{ textDecoration: "underline", color: "blue" }}>9202103433</span>
                                         </Link>
                                     </p>
                                     <p >
@@ -144,7 +144,7 @@ const Contacts = () => {
                                     </p>
                                 </div>
                                 <p>
-                                    <b>Address: </b>Comming Soon in Bilaspur, Chhattisgarh.
+                                    <b>Address: </b>1st Floor Aditya Tower, Opp. 90 degree fitness gym, Dayalband, Bilaspur, Chhattisgarh
                                 </p>
                                 <div>
                                     <p className="fs-3">

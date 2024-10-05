@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useContext, useEffect } from 'react'
 import Header from '../../components/Header/Header'
 import "./Home.css"
 // import AddReview from '../Review/AddReview'
@@ -8,6 +8,7 @@ import Enroll from '../Enroll/Enroll'
 import Header2 from '../../components/Header/Header-2'
 
 const Home = () => {
+
   return (
     <div>
       <Header />
