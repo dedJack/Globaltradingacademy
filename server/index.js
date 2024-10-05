@@ -7,7 +7,7 @@ const connectDB = require('./db');
 const authRouter = require('./routes/auth');
 const contactRoute = require('./routes/contact');
 const errorMiddleware = require('./middlewares/error');
-const allowedOrigins = process.env.SERVER_API_URL || "https://globaltradingacademy.netlify.app"
+const allowedOrigins = process.env.SERVER_API_URL 
 // const allowedOrigins = "http://localhost:3000"
 
 const corsOptions = {
