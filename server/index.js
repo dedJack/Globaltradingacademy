@@ -19,7 +19,7 @@ const corsOptions = {
     }
   },
   methods: "GET, POST, PUT, DELETE, PATCH, HEAD",
-  credentials: true, // Allow credentials (cookies, authorization headers, etc.)
+  credentials: true, 
 };
 
 app.use(cors(corsOptions));
