@@ -8,7 +8,7 @@ import { toast } from 'react-toastify'
 const Signup = () => {
 
     const navigate = useNavigate();
-
+    const api_url = process.env.REACT_APP_FRONTEND_URL;
 
     //Using useContext.
     const context = useContext(noteContext);
@@ -32,7 +32,7 @@ const Signup = () => {
     //handling form submission.
     const handleSubmit = async (e) => {
         e.preventDefault();
-        const { name, email, password } = user;
+        const { name, email, phone, password } = user;
 
         if (name === '') {
             toast.error('Enter Your name');
@@ -41,12 +41,18 @@ const Signup = () => {
         } else if (!email.includes("@")) {
             toast.error('Enter a valid Email');
         } else if (password === '') {
+        } else if (phone === '') {
+            toast.error('Enter phone number');
+        } else if (phone.length < 10) {
+            toast.error('Enter a valid number');
+        } else if (password === '') {
             toast.error('Enter your password');
         } else if (password.length < 6) {
             toast.error('Password should be atleast 6 letters');
         } else {
             try {
-                const respone = await fetch("http://192.168.1.10:5000/api/auth/register", {
+                console.log(api_url)
+                const respone = await fetch("http://localhost:5000/api/auth/register", {
                     method: "POST",
                     headers: {
                         "Content-Type": "application/json"
@@ -101,7 +107,7 @@ const Signup = () => {
                                     <input type="email" className=" form-control" placeholder='Enter your Email' id="email" name="email" onChange={onChange} value={user.email} autoComplete='off' />
                                 </div>
                                 <div className="mb-4" >
-                                    <label htmlFor="phone" className="form-label">Email address:</label>
+                                    <label htmlFor="phone" className="form-label">Phone:</label>
                                     <input type="number" className=" form-control" placeholder='phone No.' id="phone" name="phone" onChange={onChange} value={user.phone} autoComplete='off' />
                                 </div>
                                 <div className="mb-4">

@@ -3,6 +3,7 @@ import NoteContext from "./noteContext";
 
 const NoteState = (props) => {
 
+    const api_url = process.env.REACT_APP_FRONTEND_URL;
     const [token, setToken] = useState(localStorage.getItem("userDataToken"));
     const [user, setUser] = useState("");
 

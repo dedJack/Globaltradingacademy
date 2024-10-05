@@ -8,6 +8,7 @@ import noteContext from '../../context/noteContext'
 const Login = () => {
 
     const navigate = useNavigate();
+    const api_url = process.env.REACT_APP_FRONTEND_URL;
 
     //Using useContext.
     const context = useContext(noteContext);
@@ -42,15 +43,15 @@ const Login = () => {
             toast.error('Password should be atleast 6 letters');
         } else {
             try {
-                const response = await fetch("http://192.168.1.10:5000/api/auth/login", {
+                const response = await fetch("http://localhost:5000/api/auth/login", {
                     method: "POST",
                     headers: {
                         "Content-Type": "application/json"
                     }, body: JSON.stringify(user)
                 });
+                const data = await response.json();
+                console.log(data);
                 if (response.ok) {
-                    const data = await response.json();
-                    // console.log(data);
                     //saving the token in localStorage.
                     serverTokenLS(data.token);
                     toast.success("User logged In.")

@@ -7,6 +7,7 @@ import noteContext from '../../context/noteContext';
 
 const Contacts = () => {
 
+    const api_url = process.env.REACT_APP_FRONTEND_URL;
     const context = useContext(noteContext);
     const { user } = context;
 
@@ -49,7 +50,7 @@ const Contacts = () => {
             toast.error("Provide phone no.")
         } else {
             try {
-                const response = await fetch("http://192.168.1.10:5000/api/form/contact", {
+                const response = await fetch("http://localhost:5000/api/form/contact", {
                     method: "POST",
                     headers: {
                         "Content-Type": "application/json"
@@ -77,11 +78,11 @@ const Contacts = () => {
         <>
             <div className='contacts'>
                 <main className="contact-page">
-                    <div>
-                        <h2 className="text-center text-decoration-underline" style={{ fontSize: "3rem", margin: "0px" }}>
-                            Contact Us
-                        </h2>
-                        <div className="container" id="contacts">
+                    <h2 className="text-center text-decoration-underline" style={{ fontSize: "3rem", margin: "0px" }}>
+                        Contact Us
+                    </h2>
+                    <div className="container">
+                        <div id="contacts">
                             <div className="contactForm">
                                 <form className="myForm my-3" onSubmit={handleSubmit}>
                                     <div className="name mb-1">

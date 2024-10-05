@@ -20,7 +20,8 @@ const Navbar = () => {
     return (
         <div className='navbar'>
             <div className="brand">
-                <img src={assets.logo} alt="logo" />
+                <NavLink to={"/"}><img src={assets.logo} alt="logo" /></NavLink>
+                
                 <li><NavLink to={"/"}>Global trading academy</NavLink></li>
             </div>
 
@@ -32,7 +33,7 @@ const Navbar = () => {
                 <ul className='nav-items'>
                     <li><NavLink to={"/"} className={({ isActive }) => (isActive ? "active" : "")} onClick={toggleLinks} >Home</NavLink></li>
                     <li><NavLink to={"/benefits"} className={({ isActive }) => (isActive ? "active" : "")} onClick={toggleLinks}>Benefits</NavLink></li>
-                    <li><NavLink to={"/forexcalc"} className={({ isActive }) => (isActive ? "active" : "")} onClick={toggleLinks}>Forex calculator</NavLink> </li>
+                    <li><NavLink to={"https://capitalxtend.com/calculators"} target="_blank" className={({ isActive }) => (isActive ? "active" : "")} onClick={toggleLinks}>Forex calculator</NavLink> </li>
                     <li><NavLink to={"/about"} className={({ isActive }) => (isActive ? "active" : "")} onClick={toggleLinks}>About</NavLink></li>
                     <li><NavLink to={"/contact"} className={({ isActive }) => (isActive ? "active" : "")} onClick={toggleLinks}>Contact us</NavLink></li>
                     {isLoggedIn ? (

@@ -5,6 +5,7 @@ import noteContext from '../../context/noteContext';
 
 const EnrollForm = () => {
 
+    const api_url = process.env.REACT_APP_FRONTEND_URL;
     const context = useContext(noteContext);
     const { user } = context;
 
@@ -52,7 +53,7 @@ const EnrollForm = () => {
             toast.error("Enter your query.")
         } else {
             try {
-                const response = await fetch("http://192.168.1.10:5000/api/form/enquiry", {
+                const response = await fetch("http://localhost:5000/api/form/enquiry", {
                     method: "POST",
                     headers: {
                         "Content-Type": "application/json"

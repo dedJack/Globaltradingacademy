@@ -7,14 +7,14 @@ const Footer = () => {
         <>
             <footer className="footers bg-dark ">
                 <div className='content-1'>
-                    <ul className="social-menu">
+                    {/* <ul className="social-menu">
                         <li className="footer-menu-items">
                             <Link to="https://www.instagram.com/mr_shubham_choudhary/" target='blank' className="menu-items text-white">instagram</Link>
                         </li>
                         <li className="footer-menu-items">
                             <Link to="/" className="menu-items text-white">twitter</Link>
                         </li>
-                    </ul>
+                    </ul> */}
                 </div>
                 <div className="content-2">
                         <p className='copyRight'>Copyright© 2024 Global Trading Academy. All Rights Reserved</p>

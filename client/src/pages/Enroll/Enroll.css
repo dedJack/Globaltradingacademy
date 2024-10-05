@@ -17,7 +17,7 @@
 }
 .enroll-content p{
     margin: 0 1rem;
-    font-size: 1.3rem;
+    font-size: 2rem;
 }
 .scrolling-text {
     background-color: rgb(220, 180, 243);
@@ -28,7 +28,7 @@
 }
 
 .scrolling-text span {
-    font-size: 1.3rem;
+    font-size: 1.8rem;
     display: inline-block;
     padding-left: 50%;
     animation: scroll-text 12s linear infinite;
@@ -121,4 +121,8 @@
     .mainForm{
       width: 100%;
     }
+    .enroll-content p{
+      margin: 0 1rem;
+      font-size: 1.1rem;
+  }
   }

@@ -1,17 +1,48 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import "./Enroll.css"
 import { NavLink } from 'react-router-dom'
 
 const Enroll = () => {
+
+    // const api_url = process.env.REACT_APP_FRONTEND_URL;
+    const [information, setInformation] = useState("");
+
+    const handleInfo = async () => {
+        try {
+            // console.log("hii")
+            const response = await fetch("http://localhost:5000/api/form/information", {
+                method: "GET",
+                headers: {
+                    "Content-Type": "application/json"
+                }
+            });
+
+            const data = await response.json();
+            // console.log(data.infoMsg[0].message);
+            if(data.infoMsg.length === 0){
+                console.log("No message to display..")
+            }else{
+                setInformation(data.infoMsg[data.infoMsg.length-1].message);
+            }
+        } catch (error) {
+            console.log("No msg to display");
+        }
+    }
+
+    useEffect(()=>{
+        handleInfo()
+        // eslint-disable-next-line
+    },[]);
+
     return (
         <div>
             <div className="enroll">
                 <div className="enroll-content">
                     <NavLink to="/enroll"><button className="btn btn-primary">Enroll</button></NavLink>
-                    <p>Register for 1-1 session</p>
+                    <p>Register for free 1-1 Appointment</p>
                 </div>
                 <div className="scrolling-text">
-                    <span>This is a modern scrolling text example using CSS animations!</span>
+                    <span>{information}</span>
                 </div>
             </div>
         </div>
