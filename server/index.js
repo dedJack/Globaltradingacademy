@@ -1,13 +1,13 @@
-require('dotenv').config()
-const express = require('express')
+require("dotenv").config()
+const express = require("express")
 const app = express()
 const port = process.env.PORT || 5000;
-var cors = require('cors');
-const connectDB = require('./db');
-const authRouter = require('./routes/auth');
-const contactRoute = require('./routes/contact');
-const errorMiddleware = require('./middlewares/error');
-const allowedOrigins = process.env.SERVER_API_URL 
+var cors = require("cors");
+const connectDB = require("./db");
+const authRouter = require("./routes/auth");
+const contactRoute = require("./routes/contact");
+const errorMiddleware = require("./middlewares/error");
+const allowedOrigins = process.env.SERVER_API_URL;
 // const allowedOrigins = "http://localhost:3000"
 
 const corsOptions = {
@@ -15,7 +15,7 @@ const corsOptions = {
     if (!origin || allowedOrigins.indexOf(origin) !== -1) {
       callback(null, true); // Allow the origin
     } else {
-      callback(new Error('Not allowed by CORS'));
+      callback(new Error("Not allowed by CORS"));
     }
   },
   methods: "GET, POST, PUT, DELETE, PATCH, HEAD",
