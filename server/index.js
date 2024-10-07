@@ -9,10 +9,7 @@ const contactRoute = require("./routes/contact");
 const errorMiddleware = require("./middlewares/error");
 // const allowedOrigins = process.env.SERVER_API_URL || "https://globaltradingacademy.in";
 // const allowedOrigins = "http://localhost:3000"
-const allowedOrigins = [
-  "https://globaltradingacademy.in",
-  "https://www.globaltradingacademy.in" // Add the www version if needed
-];
+const allowedOrigins = process.env.ALLOWED_ORIGINS ? process.env.ALLOWED_ORIGINS.split(",") : [];
 const corsOptions = {
   origin: function (origin, callback) {
     // Allow requests with no origin, e.g., mobile apps or curl requests
