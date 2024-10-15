@@ -1,0 +1,225 @@
+/* General Layout */
+.title{
+  color: #ddd;
+  font-size: 1.7rem;
+}
+.panel{
+  border-bottom: 1px solid #ddd;
+  padding: 1rem;
+  text-align: center;
+}
+.layout {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.sideBar {
+  position: fixed;
+  width: 20%;
+  min-width: 200px;
+  background-color: #00004f;
+  font-size: 1.2rem;
+  height: 100vh;
+  border-right: 1px solid #9e1313;
+  transition: width 0.3s;
+  padding-top: 1rem;
+}
+
+.tablesInfo {
+  margin-left: 22%;
+  padding: 2rem;
+  width: 78%;
+  transition: margin-left 0.3s;
+}
+
+/* Sidebar Navigation */
+.menu-items {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.menu-items li {
+  border-bottom: 1px solid #353131;
+}
+
+.items {
+  display: block;
+  color: whitesmoke;
+  text-decoration: none;
+  padding: 1rem;
+  transition: padding-left 0.3s;
+}
+
+.items:hover {
+  padding-left: 1.4rem;
+  background-color: #11116f;
+}
+
+.items:active {
+  color: bisque;
+}
+
+/* Table Container and Title */
+.adminTitle {
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-decoration: underline;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+/* Table Styling */
+.table-content {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 1rem;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.table-content thead tr {
+  background-color: #008080;
+  color: whitesmoke;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.table-content th, .table-content td {
+  padding: 10px 15px;
+  border-bottom: 1px solid #ddd;
+}
+
+.table-content tbody tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.table-content tbody tr:nth-child(odd) {
+  background-color: #ffffff;
+}
+
+.table-content tbody tr:hover {
+  background-color: #e0f7fa;
+}
+
+.table-content tbody tr:last-child {
+  border-bottom: 2px solid #008080;
+}
+
+/* Buttons Styling */
+.admin-btn {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 5px;
+  background-color: #add4ec;
+  color: #333;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.admin-btn:hover {
+  background-color: #5db2e7;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.Btn-links {
+  color: #333;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.Btn-links:hover {
+  color: #111;
+}
+
+/* Information Section */
+.information {
+  margin-left: 22%;
+  padding: 1rem;
+  font-size: 1.5rem;
+  color: #333;
+  text-align: center;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 1024px) {
+  .sideBar {
+      width: 25%;
+  }
+  .tablesInfo, .information {
+      margin-left: 27%;
+      font-size: 1rem;
+      padding: 0;
+  }
+  .table-content {
+      font-size: 0.95rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .layout {
+      flex-direction: column;
+  }
+  .sideBar {
+      position: relative;
+      width: 100%;
+      height: auto;
+      border-right: none;
+      border-bottom: 1px solid #9e1313;
+  }
+  .tablesInfo, .information {
+      margin-left: 0;
+      width: 100%;
+  }
+  .items {
+      padding: 0.75rem;
+      font-size: 1.1rem;
+  }
+  .admin-btn {
+      padding: 6px 12px;
+      font-size: 0.85rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .title {
+      font-size: 2rem;
+      line-height: 2rem;
+  }
+  .sideBar {
+      font-size: 1rem;
+  }
+  .items {
+      padding-left: 0.5rem;
+      line-height: 2.5rem;
+  }
+  .table-content th, .table-content td {
+      padding: 5px 8px;
+      font-size: 0.85rem;
+  }
+  .admin-btn {
+      padding: 4px 10px;
+      font-size: 0.8rem;
+  }
+}
+
+
+.UpdateForm {
+  width: 40%;
+  border: 1px solid black;
+  border-radius: 1.2rem;
+  font-weight: bold;
+  font-size: 1.3rem;
+  padding: 1.5rem;
+  margin: 1rem auto;
+  left:40%;
+  box-shadow: 1px 0 5px black;
+  position: absolute;
+}

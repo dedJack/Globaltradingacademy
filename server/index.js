@@ -6,11 +6,13 @@ var cors = require("cors");
 const connectDB = require("./db");
 const authRouter = require("./routes/auth");
 const contactRoute = require("./routes/contact");
+const adminRoute = require("./routes/admin");
 const errorMiddleware = require("./middlewares/error");
 // const allowedOrigins = "http://localhost:3000"
 const allowedOrigins = [
   "https://globaltradingacademy.in",
-  "https://www.globaltradingacademy.in" // Add the www version if needed
+  "https://www.globaltradingacademy.in", // Add the www version if needed
+  // "http://localhost:3000"
 ];
 const corsOptions = {
   origin: function (origin, callback) {
@@ -30,6 +32,7 @@ app.use(express.json());
 
 app.use("/api/auth", authRouter);
 app.use("/api/form", contactRoute);
+app.use("/api/admin", adminRoute);
 
 app.use(errorMiddleware)
 

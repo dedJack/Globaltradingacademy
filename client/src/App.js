@@ -12,6 +12,14 @@ import Logout from './components/Login/Logout';
 import ScrollToTop from './components/ScrollToTop';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import AdminLayout from './admin/AdminLayout';
+import AdminUsers from './admin/AdminUsers';
+import AdminContact from './admin/AdminContact';
+import AdminEnquiry from './admin/AdminEnquiry';
+import AdminReview from './admin/AdminReview';
+import AdminUpdate from './admin/Admin-Update';
+import AdminView from './admin/Admin-View';
+import AdminImpMessage from './admin/AdminImpMessage';
 
 
 const App = () => {
@@ -42,6 +50,15 @@ const App = () => {
           <Route path='/signup' element={<Signup />} />
           <Route path='/logout' element={<Logout />} />
           <Route path='*' element={<Error />} />
+          <Route path="/admin" element={<AdminLayout />} >
+            <Route path = "users" element={<AdminUsers />} />
+            <Route path = "review" element={<AdminReview />} />
+            <Route path = "contacts" element={<AdminContact />} />
+            <Route path = "enquiry" element={<AdminEnquiry />} />
+            <Route path = "impmessage" element={<AdminImpMessage />} />
+            <Route path = "users/:id/edit" element ={<AdminUpdate />} />
+            <Route path = "enquiry/:id/view" element ={<AdminView />} />
+          </Route>
         </Routes>
         {/* <Footer /> */}
       </BrowserRouter>

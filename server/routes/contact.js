@@ -4,7 +4,6 @@ const {contactForm, enquiryForm, getInformation, postInfo} = require("../control
 
 router.route("/contact").post(contactForm);
 router.route("/enquiry").post(enquiryForm);
-router.route("/postInfo").post(postInfo);
 router.route("/information").get(getInformation);
 
 module.exports = router;

@@ -25,18 +25,6 @@ const enquiryForm = async(req, res)=>{
 }
 
 
-const postInfo = async(req, res)=>{
-    try {
-        const { message } = req.body;
-        const impMessage = new Information({ message });
-        const savedMessage = await impMessage.save();
-        return res.status(201).json({message:"Information saved successfully", savedMessage});
-    } catch (error) {
-        return res.status(500).json({message:"Internal server error"});
-    }
-}
-
-
 const getInformation = async(req, res)=>{
     try {
         // console.log(req.body);
@@ -51,4 +39,4 @@ const getInformation = async(req, res)=>{
     }
 }
 
-module.exports = { contactForm, enquiryForm, getInformation, postInfo };
+module.exports = { contactForm, enquiryForm, getInformation };
