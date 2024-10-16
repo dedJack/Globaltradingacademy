@@ -20,6 +20,8 @@ import AdminReview from './admin/AdminReview';
 import AdminUpdate from './admin/Admin-Update';
 import AdminView from './admin/Admin-View';
 import AdminImpMessage from './admin/AdminImpMessage';
+import QuickLinks from './pages/QuickLinks/QuickLinks';
+import ImpLinks from './admin/Imp-Links';
 
 
 const App = () => {
@@ -49,6 +51,7 @@ const App = () => {
           <Route path='/login' element={<Login />} />
           <Route path='/signup' element={<Signup />} />
           <Route path='/logout' element={<Logout />} />
+          <Route path='/quickLinks' element={<QuickLinks />} />
           <Route path='*' element={<Error />} />
           <Route path="/admin" element={<AdminLayout />} >
             <Route path = "users" element={<AdminUsers />} />
@@ -56,6 +59,7 @@ const App = () => {
             <Route path = "contacts" element={<AdminContact />} />
             <Route path = "enquiry" element={<AdminEnquiry />} />
             <Route path = "impmessage" element={<AdminImpMessage />} />
+            <Route path = "implinks" element={<ImpLinks />} />
             <Route path = "users/:id/edit" element ={<AdminUpdate />} />
             <Route path = "enquiry/:id/view" element ={<AdminView />} />
           </Route>

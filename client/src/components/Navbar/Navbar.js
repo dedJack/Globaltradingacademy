@@ -33,6 +33,7 @@ const Navbar = () => {
                 <ul className='nav-items'>
                     <li><NavLink to={"/"} className={({ isActive }) => (isActive ? "active" : "")} onClick={toggleLinks} >Home</NavLink></li>
                     <li><NavLink to={"/benefits"} className={({ isActive }) => (isActive ? "active" : "")} onClick={toggleLinks}>Benefits</NavLink></li>
+                    <li><NavLink to={"/quickLinks"} className={({ isActive }) => (isActive ? "active" : "")} onClick={toggleLinks}>Platforms</NavLink></li>
                     <li><NavLink to={"https://capitalxtend.com/calculators"} target="_blank" className={({ isActive }) => (isActive ? "active" : "")} onClick={toggleLinks}>Forex calculator</NavLink> </li>
                     <li><NavLink to={"/about"} className={({ isActive }) => (isActive ? "active" : "")} onClick={toggleLinks}>About</NavLink></li>
                     <li><NavLink to={"/contact"} className={({ isActive }) => (isActive ? "active" : "")} onClick={toggleLinks}>Contact us</NavLink></li>

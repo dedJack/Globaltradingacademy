@@ -62,13 +62,18 @@ const AdminLayout = () => {
                             </NavLink>
                         </li>
                         <li onClick={handleListItemClick}>
+                            <NavLink className="items" to="/admin/implinks">
+                                Quick links
+                            </NavLink>
+                        </li>
+                        <li onClick={handleListItemClick}>
                             <NavLink className="items" to="/">
                                 Home
                             </NavLink>
                         </li>
                     </ul>
                 </aside>
-                <div className={`information ${showInformation && location.pathname === '/Admin' ? '' : 'd-none'}`}>
+                <div className={`information ${location.pathname === "/admin" ? "" :"d-none"}`}>
                     Welcome to the Admin Panel.. <br /> We Offer You collections Of FOREX.
                 </div>
             </div>

@@ -84,7 +84,7 @@ const Contacts = () => {
                     <div className="container">
                         <div id="contacts">
                             <div className="contactForm">
-                                <form className="myForm my-3" onSubmit={handleSubmit}>
+                                <form className="my-3" onSubmit={handleSubmit}>
                                     <div className="name mb-1">
                                         <input
                                             type="text"

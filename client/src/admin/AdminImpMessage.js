@@ -34,22 +34,17 @@ const AdminImpMessage = () => {
     }
     return (
         <>
-            <section className='tablesInfo container'>
+            <section className='postTable container'>
                 <div className='adminTitle text-center'>
                     <h2>Messages</h2>
                 </div>
-                <div className="container users-info " style={{
-                    width: "69%",
-                    border: "2px solid black",
-                    left: "10rem",
-                    position: "relative"
-                }}>
+                <div className="container">
                     <form onSubmit={handleSubmit}>
                         <div className="mb-4" >
                             <label htmlFor="message" className="form-label">Enter Your message:</label>
-                            <input type="text" className=" form-control" placeholder='Enter your message' onChange={onChange} value={msg.message} id="message" name="message" />
+                            <input type="text" className="form-control" placeholder='Enter your message' onChange={onChange} value={msg.message} id="message" name="message" />
                         </div>
-                        <button className='btn btn-primary' type='submit'> Submit </button>
+                        <button className='admin-btn' type='submit'> Submit </button>
                     </form>
                 </div>
             </section>

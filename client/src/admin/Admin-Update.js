@@ -59,7 +59,8 @@ const AdminUpdate = () => {
                 }, body: JSON.stringify(data)
             })
             if(response.ok){
-                const resultData = await response.json();
+                await response.json();
+                // const resultData = await response.json();
                 // console.log(resultData);
                 toast.success("User updated successfully");
             }else{

@@ -7,7 +7,7 @@ const home = async (req, res) => {
 //Route 1: for register by using post.
 const register = async (req, res) => {
     try {
-        console.log("hiii")
+        // console.log("hiii")
         // console.log(req.body);
         const { name, email, phone, password } = req.body;
 

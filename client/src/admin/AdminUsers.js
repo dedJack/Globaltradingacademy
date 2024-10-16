@@ -12,17 +12,17 @@ const AdminUsers = () => {
   const getAllUsers = async () => {
     try {
       let token = localStorage.getItem("userDataToken");
-      const data = await fetch(`${api_url}/api/admin/getAllUsers`, {
+      const response = await fetch(`${api_url}/api/admin/getAllUsers`, {
         method: "GET",
         headers: {
           "auth-token": token,
           "Content-Type": "application/json"
         },
       });
-      if (data.ok) {
-        const response = await data.json();
+      if (response.ok) {
+        const data = await response.json();
         // console.log(response);
-        setUsers(response);
+        setUsers(data);
       }
     } catch (error) {
       console.log("fetching user details errror");
@@ -43,7 +43,8 @@ const AdminUsers = () => {
       });
 
       if (response.ok) {
-        const data = await response.json();
+        await response.json();
+        // const data = await response.json();
         // console.log(data);
         getAllUsers();
         toast.success("user deketed successfully");
@@ -61,6 +62,7 @@ const AdminUsers = () => {
 
   useEffect(() => {
     getAllUsers();
+     // eslint-disable-next-line 
   }, []);
 
   return (
@@ -75,6 +77,7 @@ const AdminUsers = () => {
               <tr>
                 <th>Name</th>
                 <th>Email</th>
+                <th>Phone</th>
                 <th>Update</th>
                 <th>Delete</th>
               </tr>
