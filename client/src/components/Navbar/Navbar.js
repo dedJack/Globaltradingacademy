@@ -37,8 +37,9 @@ const Navbar = () => {
                     <li><NavLink to={"https://capitalxtend.com/calculators"} target="_blank" className={({ isActive }) => (isActive ? "active" : "")} onClick={toggleLinks}>Forex calculator</NavLink> </li>
                     <li><NavLink to={"/about"} className={({ isActive }) => (isActive ? "active" : "")} onClick={toggleLinks}>About</NavLink></li>
                     <li><NavLink to={"/contact"} className={({ isActive }) => (isActive ? "active" : "")} onClick={toggleLinks}>Contact us</NavLink></li>
-                    {!user.isAdmin ? "" :
+                    {user.isAdmin ?
                         <li><NavLink to={"/admin"} className={({ isActive }) => (isActive ? "active" : "")} onClick={toggleLinks}>Admin</NavLink></li>
+                        :""
                     }
                     {isLoggedIn ? (
                         <li className="navbar-right"><NavLink to="/login" onClick={() => {LogoutUser(); toggleLinks();}}>Logout</NavLink></li>
