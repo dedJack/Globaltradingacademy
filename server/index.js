@@ -36,8 +36,6 @@ app.use("/api/admin", adminRoute);
 
 app.use(errorMiddleware)
 
-connectDB().then(() => {
-  app.listen(port, () => {
-    console.log(`Global Trading Academy listening on port ${port}`)
-  })
-})
+connectDB();
+
+module.exports = app;
