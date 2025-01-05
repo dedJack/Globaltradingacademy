@@ -8,12 +8,13 @@ const QuickLinks = require("../models/QuickLinks");
 const getAllUsers = async (req, res) => {
     try {
         const user = await User.find({}, { password: 0 });
-        if (!user || user === 0) {
+        if (!user || user.length === 0) {
             return res.status(404).json({ error: "Users not found..." });
         }
         return res.status(200).json(user);
     } catch (error) {
-        res.status(500).json({ msg: "Internal server error" });
+        console.error("Error fetching users:", error); // Log error for debugging
+        return res.status(500).json({ msg: "Internal server error" });
     }
 }
 
