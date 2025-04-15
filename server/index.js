@@ -6,6 +6,7 @@ var cors = require("cors");
 const connectDB = require("./db");
 const authRouter = require("./routes/auth");
 const contactRoute = require("./routes/contact");
+const adminRouter = require("./routes/admin");
 const errorMiddleware = require("./middlewares/error");
 // const allowedOrigins = process.env.
 // const allowedOrigins = "http://localhost:3000"
@@ -31,6 +32,7 @@ app.use(cors(corsOptions));
 app.use(express.json());
 
 app.use("/api/auth", authRouter);
+app.use("/api/admin", adminRouter);
 app.use("/api/form", contactRoute);
 
 app.use(errorMiddleware)
