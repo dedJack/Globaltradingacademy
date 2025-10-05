@@ -71,6 +71,7 @@ const Home = () => {
   if (!mounted) {
     return (
       <div className="min-h-screen bg-black text-white">
+        
         {/* Navbar without scroll effects */}
         <Navbar />
         {/* Loading placeholder */}
@@ -98,7 +99,7 @@ const Home = () => {
               <img
                 src="/shubham.png"
                 alt="shubham"
-                className="w-full h-full object-contain  shadow-2xl"
+                className="w-full h-full object-cover  shadow-2xl"
               />
             </div>
           </div>
