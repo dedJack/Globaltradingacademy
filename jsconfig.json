@@ -1,7 +1,8 @@
 {
   "compilerOptions": {
+    "baseUrl": ".",        // important! tells Next.js/TS where to start resolving paths
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": ["src/*"]    // maps "@/components/..." → src/components/..."
     }
   }
 }
