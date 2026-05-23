@@ -11,7 +11,7 @@ export default function Navbar() {
   const navRef = useRef(null);
   const router = useRouter();
   const pathname = usePathname();
-  const { isLoggedIn, LogoutUser } = useContext(NoteContext);
+  const { isLoggedIn, LogoutUser } = useContext(NoteContext) || {};
 
   const navigationItems = [
     { id: "/", label: "Home", route: "/" },
