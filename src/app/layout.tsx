@@ -1,6 +1,7 @@
 'use client'
 import './globals.css'
 import Navbar from '../components/Navbar'
+import NoteState from '../context/AuthContext'
 
 export default function RootLayout({
   children,
@@ -11,8 +12,10 @@ export default function RootLayout({
     <html lang="en">
       <meta name="google-site-verification" content="PzEAQsMz1ciC8nYkqkcc-u61Irje_xRwqb2uuFzQHOQ" />
       <body>
-        <Navbar />
-        {children}
+        <NoteState>
+          <Navbar />
+          {children}
+        </NoteState>
       </body>
     </html>
   )
