@@ -1,18 +1,24 @@
 "use client";
-import React, { useContext, useEffect } from 'react'
-import { NoteContext } from '../../context/AuthContext';
-import Link from 'next/link';
 
-
+import React, { useContext, useEffect } from "react";
+import { NoteContext } from "../../context/AuthContext";
+import { useRouter } from "next/navigation";
 
 const Logout = () => {
+  const router = useRouter();
 
-    const { LogoutUser } = useContext(NoteContext);
-    useEffect(() => {
-        LogoutUser();
-    }, [LogoutUser]);
+  const context = useContext(NoteContext);
+  const LogoutUser = context?.LogoutUser;
 
-    return <Link href={"/login"} />
-}
+  useEffect(() => {
+    if (LogoutUser) {
+      LogoutUser();
+    }
 
-export default Logout
+    router.replace("/login");
+  }, [LogoutUser, router]);
+
+  return null;
+};
+
+export default Logout;
