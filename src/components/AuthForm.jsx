@@ -20,7 +20,7 @@ export default function AuthForm({ mode = "signup" }) {
         password: '',
     });
     const router = useRouter();
-    const { user, isLoggedIn, LogoutUser,serverTokenLS } = useContext(NoteContext);
+    const { user, isLoggedIn, LogoutUser,serverTokenLS } = useContext(NoteContext) || {};
 
     //UseEffect to show Appearing signup form from opacity-0 to 100
     useEffect(() => {
