@@ -112,7 +112,7 @@ const Contact = () => {
                 Global Trading Education
               </span>
             </div>
-            <h1 className="text-6xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
+            <h1 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
               Get In Touch
             </h1>
             <p className="text-xl text-gray-400 max-w-2xl mx-auto">
@@ -242,22 +242,29 @@ const Contact = () => {
                   </a>
 
                   <div className="flex items-start gap-4 p-4 bg-gray-900/50 rounded-xl border border-gray-700/50">
-                    <div className="p-3 bg-purple-500/10 rounded-lg">
-                      <MapPin className="w-6 h-6 text-purple-400" />
-                    </div>
-                    <div>
-                      <p className="text-sm text-gray-400 mb-1">Visit Us</p>
-                      <p className="text-sm text-gray-300 leading-relaxed">
-                        1st Floor Aditya Tower, Opp. 90 degree fitness gym,
-                        Dayalband, Bilaspur, Chhattisgarh
-                      </p>
-                    </div>
+                    <a
+                        href="https://maps.google.com/?q=1st+Floor+Aditya+Tower+opp.+90+degree+fitness+gym+Dayalband+Bilaspur+Chhattisgarh+495001"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center space-x-4 group cursor-pointer"
+                      >
+                        <div className="bg-pink-600/20 p-3 rounded-lg group-hover:bg-pink-600/30 transition-colors duration-300">
+                          <MapPin size={24} className="text-pink-400" />
+                        </div>
+                        <div>
+                          <h3 className="font-semibold text-white">Location</h3>
+                          <p className="text-gray-400 group-hover:text-pink-400 transition-colors">
+                            1st Floor, Aditya Tower, opp. 90 degree fitness gym, Dayalband,
+                            Bilaspur, Chhattisgarh 495001
+                          </p>
+                        </div>
+                      </a>
                   </div>
                 </div>
               </div>
 
               {/* Career Card */}
-              <div className="bg-gradient-to-br from-emerald-900/30 to-blue-900/30 backdrop-blur-xl border border-emerald-500/30 rounded-2xl p-8 shadow-2xl">
+              {/* <div className="bg-gradient-to-br from-emerald-900/30 to-blue-900/30 backdrop-blur-xl border border-emerald-500/30 rounded-2xl p-8 shadow-2xl">
                 <div className="flex items-center gap-3 mb-4">
                   <div className="p-3 bg-emerald-500/20 rounded-lg">
                     <Briefcase className="w-6 h-6 text-emerald-400" />
@@ -274,7 +281,7 @@ const Contact = () => {
                   Contact Us for Careers
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </button>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>

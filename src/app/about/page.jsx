@@ -3,7 +3,7 @@ import React from 'react'
 const About = () => {
     return (
         <div className="h-[100vh] flex items-center bg-gradient-to-br from-slate-950 via-gray-800 to-neutral-950" >
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 text-justify lg:px-8 py-12">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 text-justify lg:px-8 top-30 lg:top-0 relative py-12">
                 <h1 className='text-center text-3xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent'>Global Trading Academy</h1>
                 <div>
                     Global Trading Academy is a premier institute dedicated to empowering individuals with the knowledge and skills necessary to thrive in the world of trading. Founded by Shubham Choudhary, a seasoned trader with over five years of hands-on experience in the financial markets, our academy is committed to providing high-quality education tailored to meet the needs of aspiring traders at every level. Whether you are a beginner looking to get started or an experienced trader aiming to refine your strategies, Global Trading Academy offers a comprehensive range of courses designed to help you achieve your trading goals.

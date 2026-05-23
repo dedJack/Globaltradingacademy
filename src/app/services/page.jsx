@@ -329,11 +329,11 @@ export default function Benefits() {
   const [selectedBenefit, setSelectedBenefit] = useState(null);
 
   return (
-    <div className="min-h-screen relative top-[3rem] bg-gradient-to-br from-slate-950 via-gray-900 to-neutral-950">
+    <div className="min-h-screen relative  bg-gradient-to-br from-slate-950 via-gray-900 to-neutral-950">
       {/* Header */}
       <div className="bg-gradient-to-r from-blue-900 via-gray-900 to-purple-900 py-16 px-4">
         <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent mb-4">
+          <h1 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent mt-4">
             Trading Academy Benefits
           </h1>
           <p className="text-xl text-emerald-100 max-w-3xl mx-auto">
